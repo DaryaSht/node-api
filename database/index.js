@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// const config = require('../config/config');
+ const config = require('../config/config');
 
 const options = {
   useCreateIndex: true,
@@ -17,6 +17,6 @@ mongoose.connect(config.db, options)
     console.log(`[*] Error while connecting to DB, with error: ${err}`);
   });
 
-require('./models/user/User');
+require('./models/user');
 
 module.exports = mongoose;
