@@ -9,12 +9,14 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 // const morgan = require('morgan');
 // const boolParser = require('express-query-boolean');
+const chalk = require('chalk');
 
 dotenv.config();
 
+require('./database/connect');
+
 const app = express();
 
-require('./database/index');
 // require('./api/passport');
 
 app.use(bodyParser.urlencoded({ extended: true }));
